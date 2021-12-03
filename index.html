@@ -1,0 +1,88 @@
+<html>
+<head>
+    <title>Website Desingn Usando HTML e CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Acessórioss</a></li>
+                    <li><a href="#">Comprar</a></li>
+                    <li><a href="#">Contato:</a></li> 
+                    <li><a href="#">+55 (83) 98801-5744</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay"></div>
+            <img src="images/mobile.png" class="mobile">
+            <div id="circle">
+                <div class="feature one">
+                    <img src="images/camera.png">
+                    <div>
+                    <h1>Câmera</h1>
+                    <p>72MP com resoluções em 4K</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                     <img src="images/processor.png">
+                     <div>
+                        <h1>Processador</h1>
+                        <p>7EN Dragon 32 Núcleos 311nm</p>
+                    </div>
+                </div>
+                <div class="feature tree">
+                     <img src="images/display.png">
+                     <div>
+                        <h1>Display</h1>
+                        <p>6.5" Tela Mini-drop Fullscreen</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                     <img src="images/battery.png">
+                     <div>
+                        <h1>Bateria</h1>
+                        <p>Bateria de 5000mAh,  720Hrs em Standby</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="images/arrow.png" id="upBtn">
+            <h3>Especificações REDMI NOTE 10 </h3>
+            <img src="images/arrow.png" id="downBtn">
+        </div>
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+
+        upBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+        downBtn.onclick = function()
+        {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+    </script>
+    
+</body>
+</html>
